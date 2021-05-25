@@ -15,9 +15,6 @@ run: 	main
 usage:
 	@echo "prg=00-template.cpp make run"
 
-list:
-	@echo "prg=00-template.cpp make run"
-	
 clean:
 	@echo "limpando projecto..." 
 	rm -rf *.o *~ main

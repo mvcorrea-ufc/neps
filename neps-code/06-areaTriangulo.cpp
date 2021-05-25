@@ -2,8 +2,13 @@
 
 using namespace std;
 
+// https://neps.academy/br/exercise/140
+
 int main(){
-	cout << "testing..." << endl;	
+	int b, h;
+	cin >> b >> h;
+
+    cout << (b*h)/2 << endl;
 
 	return 0;	
 }
