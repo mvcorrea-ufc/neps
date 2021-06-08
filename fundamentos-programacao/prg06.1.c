@@ -13,13 +13,19 @@ in: 2 5 1 out: 2
 #define TRUE !FALSE
 
 int main(){		
+	
+	// o enunciado especifica valores REAIS!!
 	float x, y, z;
 	printf("calculo da mediana\ndigite 3 numeros: ");
 	scanf("%f %f %f", &x, &y, &z);
 
-	if(	(x>y && y>z) || (z>y && y>x) ) printf("y %f", y);
-	else if( (y>x && x>z) || (z>x && x>y) ) printf("x %f", x);
-	else printf("z %f", z);
+	float a = x-y;
+	float b = y-z;
+	float c = x-z;
+
+	if( a * b > 0 ) printf("%f\n", y);
+	else if( a * c > 0 ) printf("%f\n", z);
+	else printf("%f\n", x);
 
 	return FALSE;
 }

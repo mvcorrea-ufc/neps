@@ -1,0 +1,8 @@
+# osx related
+.DS_Store
+Thumbs.db
+
+# project related
+main
+*.[oa]
+
