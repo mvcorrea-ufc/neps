@@ -22,6 +22,6 @@ int prdRec(int x, int y){ // implementação recursiva bem simples
 int main(){			
 	int x = 0, y = 0;
 	scanf("%d %d", &x, &y);
-	printf("\n%d\n", prdRec(x, y));
+	printf("\n%d\n", (x > y) ? prdRec(x, y) : prdRec(y, x));
 	return FALSE;
 }

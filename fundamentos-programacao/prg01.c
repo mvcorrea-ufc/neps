@@ -10,6 +10,7 @@ Crie um programa em C que imprima seu nome completo no terminal.
 int main(){
 
 	printf("Marcelo Veras Correa\n");
-	
+
+	getchar(); // para esperar por uma tecla para encerrar o prg
 	return FALSE;
 }
