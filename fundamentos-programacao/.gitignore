@@ -6,3 +6,6 @@ Thumbs.db
 main
 *.[oa]
 
+#vim related
+.*.swo
+.*.swp
