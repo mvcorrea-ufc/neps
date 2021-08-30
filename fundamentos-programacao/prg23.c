@@ -12,17 +12,12 @@ posições com a sequência de Fibonacci como no exemplo:
 Após imprimir a sequência, imprima a razão entre cada número e o seu 
 antecessor (a partir do segundo número, já que o primeiro não possui 
 antecessor).
-*/	
-
-/*
-Penso que com um array de dimensão 1000, tenhamos overflow no tipo.
-Somente testei ate o 200 e o unsigned long long (maior tipo no C) 
-conseguiu sem problemas.
 */
 
 int main(){
     int x = 0;
     unsigned long long int arr[100] = {1,1};  // 64bits
+    double tmp = 0;
 
     for(int i = 2; i < 100; i++){
         arr[i] = arr[i-1] + arr[i-2];
@@ -33,8 +28,14 @@ int main(){
 
     printf("\n\n");
 
-    for(int i = 99; i > 0; i--)
-        printf("%llu ", arr[i] - arr[i-1]);
+    // exepto no primiro termo a razao tem de ser 1
+    // nota-se que para numeros muito grandes essa razao é diferente de 1 
+    // o que indica overflow (passou do limite) no tipo utilizado.
+
+    for(int i = 99; i > 0; i--){
+        tmp = arr[i]/arr[i-1];
+        printf("%.2lf ", tmp);
+    }
 
 	return false;
 }
